@@ -1,38 +1,205 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/*USERS FORM*/
+
+.users-form{
+  width: 40%;
+  overflow-x: auto;
+  padding-top:20px;
+
+}
+
+/*Contenedor de todo el formulario*/
+.users-form form{
+ 
+  width: 90%;
+  margin:0 auto;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.input-container{
+  width: 100%;
+  height: 40px;
+  margin:10px 0;
+}
+
+.name-container{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.users-form>form input{
+  background: rgba(0,0,0,.03);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  padding: 10px;
+  width: 90%;
+}
+
+div.name-container input{
+  width: 43%;
+}
+
+#firstName{
+  margin-right: 4%;
+}
+
+
+.input-container input{
+  width: 90%;
+}
+
+
+
+.users-form i{
+  font-size: 25px;
+  margin-right:10px;
+}
+
+button.submit{
+  width: 90%;
+  margin:20px 0 0 10px;
+  height: 40px;
+  background-color:#5fbab0;
+  color: white;
+  border-radius: 15px;
+  border:none;
+  font-size: 20px;
+}
+
+button.submit:hover{
+  background-color: #439b91;
+}
+
+button.submit:active{
+  width: 92%;
+  height: 42px;
+  margin:20px 0 0 0;
+}
+
+/*USERS LIST*/
+
+.users-list{
+
+  width: 60%;
+  overflow-x: auto;
+  height: 100vh;
+  background-image: url("https://fondosmil.com/fondo/27737.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.users-list h1{
+  color:rgb(221, 207, 207);
+  margin-top: 20px;
+}
+
+.users-list .user-list__card{
+  box-shadow: 5px 5px 5px rgba(12, 12, 12, 0.527);
+  overflow: hidden;
+  width: 75%;
+  height: 150px;
+  z-index: 1;
+  backdrop-filter: saturate(80%) blur(5px);
+  margin:15px auto;
+  border-radius: 10px;
+  color: rgb(221, 207, 207);
+  font-weight: 700;
+  text-align: left;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.user-list__buttons{
+  margin-top:45px;
+  margin-right: 10px;
+}
+
+.user-list__buttons button{
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  margin-left: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.user-list__buttons i{
+ font-size: 25px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.trash-button i{
+  color:rgb(179, 32, 32)
+}
+
+.edit-button i{
+  color: rgb(73, 73, 165);
+}
+
+.trash-button i:hover{
+  color:rgb(255, 0, 0)
+}
+
+.edit-button i:hover{
+  color: rgb(0, 0, 255);
+}
+
+
+
+@media (max-width: 768px){
+  /*Cambiamos de ubicacion los contenedores*/
+  .App{
+    flex-direction: column-reverse;
   }
-  to {
-    transform: rotate(360deg);
+  /*User-form*/
+  .users-form{
+    width: 100%;
+    margin-bottom: 40px;
   }
+
+  
+
+  /*User-list*/
+  .users-list{
+    width: 100%;
+  }
+  .users-list .user-list__card{
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px){
+  /*User Form*/
+
+  
+  .name-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  div.name-container input{
+    width: 98%;
+    margin-bottom: 5px;
+  }
+  
+  #firstName{
+    margin-right: 4%;
+  }
+  
 }
